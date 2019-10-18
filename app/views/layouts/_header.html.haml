@@ -1,0 +1,22 @@
+.header
+  .header__title
+    = fa_icon 'youtube', class:"header__title__icon"
+    .header__title__icon--hr
+    = link_to root_path, class:"header__title__icon--link", alt:"Tubeのth" do
+      Tubeの
+    = fa_icon 'th'
+  .header__rigth
+    .header__rigth__search
+      -# %input{type:"text", class:"header__rigth__search--input"}
+      -# %input{type:"submit", value:"SEARCH", class:"header__rigth__search--submit"}
+      .header__rigth__search__login
+        -if user_signed_in?
+          =link_to destroy_user_session_path, class:"header__rigth__search__login--link", method: "delete" do
+            Logout
+          .header__rigth__search__newPost
+            =link_to 'posts/new', class:"header__rigth__search__login--newsend" do
+              投稿する
+        -else
+          =link_to new_user_session_path, class:"header__rigth__search__login--link" do
+            Login
+  .clear

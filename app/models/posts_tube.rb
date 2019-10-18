@@ -1,0 +1,2 @@
+class PostsTube < ApplicationRecord
+end

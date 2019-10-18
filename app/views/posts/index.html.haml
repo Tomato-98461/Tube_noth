@@ -1,0 +1,38 @@
+.contents
+  .userInfo
+    -if user_signed_in?
+      ="ユーザー名:#{current_user.name}"
+  .row
+    -@posts.each do |post|
+      -# .row__l-box
+      -#   .row__l-box__thumbbox
+      -#     .row__l-box__thumbbox__thumb
+      -#       = image_tag post.tube.thmb, size: "340x230"
+      -#     .row__l-box__thumbbox__title
+      -#       = post.tube.title
+      -#     .row__l-box__thumbbox__favo
+      -#       -# =fa_icon 'heart'
+      -#   .row__l-box__postmessage
+      -#     = post.text
+      .row__c-box
+        .row__c-box__thumbbox
+          .row__c-box__thumbbox__thumb
+            = link_to "https://www.youtube.com/watch?v=#{post.tube.tag}" do
+              = image_tag post.tube.thmb, size: "340x230"
+          .row__c-box__thumbbox__title
+            = post.tube.title
+          .row__c-box__thumbbox__favo
+            -# =fa_icon 'heart'
+        .row__c-box__postmessage
+          = post.text
+      -# .row__r-box
+      -#   .row__r-box__thumbbox
+      -#     .row__r-box__thumbbox__thunb
+      -#       サムネ
+      -#     .row__r-box__thumbbox__title
+      -#       タイトル3
+      -#     .row__r-box__thumbbox__favo
+      -#       -# =fa_icon 'heart'
+      -#   .row__r-box__postmessage
+      -#     textR
+  = paginate(@posts)

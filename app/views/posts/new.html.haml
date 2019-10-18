@@ -1,0 +1,15 @@
+.devise-head
+  %h2 投稿フォーム
+.postForm
+  = form_tag(@post) do |f|
+    .postForm--element
+      ：URL
+      %input{type:"text_field",name: "url", autofocus: true, autocomplete: "URL"}
+    -# .postForm--element
+    -#   ：タイトル
+    -#   %input{type:"text_field",name: "title", autocomplete: "title"}
+    .postForm--element
+      ：メッセージ
+      %input{type:"text_field",name: "text", autocomplete: "text"}
+    .postForm--element
+      %input{type:"submit", value: "投稿する"}

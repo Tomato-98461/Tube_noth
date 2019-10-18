@@ -1,0 +1,97 @@
+@import 'content';
+
+body {
+  background-color: #832e2e;
+}
+
+.contents {
+  width: 75vw;
+  height: calc(100% - 100px);
+  background-color: rgba(255,255,255,0.7);
+  margin: 0 auto;
+  padding-top:100px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  // &__l-box {
+  //   @include box(10px);
+  //   &__thumbbox {
+  //     @include thumbbox;
+  //     &__thumb {
+  //       @include thumb;
+  //     }
+  //     &__title {
+  //       @include title;
+  //     }
+  //     &__favo {
+  //       @include favo;
+  //     }
+  //   }
+  //   &__postmessage {
+  //     @include postmessage;
+  //   }
+  // }
+  &__c-box {
+    @include box(10px);
+    &__thumbbox {
+      @include thumbbox;
+      &__thumb {
+        @include thumb;
+        // position: absolute;
+        // width: 100%;
+        // height: 80%;
+      }
+      &__title {
+        @include title;
+      }
+      &__favo {
+        @include favo;
+      }
+    }
+    &__postmessage {
+      @include postmessage;
+    }
+  }
+  // &__r-box {
+  //   @include box(0px);
+  //   &__thumbbox {
+  //     @include thumbbox;
+  //     &__thumb {
+  //       position: absolute;
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+  //     &__title {
+  //       position: absolute;
+  //       @include title;
+  //     }
+  //     &__favo {
+  //       position: absolute;
+  //       @include favo;
+  //     }
+  //   }
+  //   &__postmessage {
+  //     @include postmessage;
+  //   }
+  // }
+}
+
+.postForm {
+  height: calc(100Vh - 300px);
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-style: none;
+  &--element {
+    width: 400px;
+    height: 10px;
+    padding-top: 50px;
+    input {
+      width: 400px;
+    }
+  }
+}
