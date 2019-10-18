@@ -11,23 +11,32 @@
 
 **Association**
 - has_many :posts
-- has_many :favos_users 
-- has_many :favos, through: :favos_users
 
 
 #### postsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|title|string||
 |text|text||
-|thumb|string||
 |user_id|integer|null: false, foreign_key: true|
-|favo_id|integer|null: false, foreign_key: true|
+|tube_id|integer|null: false, foreign_key: true|
 
 **Association**
 - belongs_to :user
-- has_many :favos
+- belongs_to :tube
 
-#### favos_usersテーブル
+#### tubesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|tag|string|null: false|
+|thmb|string|null: false|
+
+**Association**
+- belongs_to :posts
+
+
+<!-- #### favos_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -35,7 +44,7 @@
 
 **Association**
 - belongs_to :user
-- belongs_to :post
+- belongs_to :post -->
 
 <!-- 
 This README would normally document whatever steps are necessary to get the
